@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_07_08_205037) do
     t.integer "dog_id"
     t.integer "groomer_id"
     t.string "appt_start_datetime"
-    t.string "app_end_datetime"
+    t.string "appt_end_datetime"
     t.integer "service_id"
   end
 
