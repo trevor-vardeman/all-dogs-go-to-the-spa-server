@@ -1,4 +1,5 @@
 class Dog < ActiveRecord::Base
   has_many :appointments
   has_many :groomers, through: :appointments
-END
+  has_many :services, through: :appointments
+end
