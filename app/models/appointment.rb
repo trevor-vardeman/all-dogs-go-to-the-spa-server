@@ -1,5 +1,5 @@
 class Appointment < ActiveRecord::Base
-  belongs_to :dogs
-  belongs_to :groomers
-  has_many :services
+  belongs_to :dog
+  belongs_to :groomer
+  belongs_to :services
 end

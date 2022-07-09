@@ -76,6 +76,14 @@ Appointment.create(
 )
 
 Appointment.create(
+  dog_id: 1,
+  groomer_id: 2,
+  appt_start_datetime: "07/21/22 10:00",
+  appt_end_datetime: "07/21/22 10:30",
+  service_id: 2
+)
+
+Appointment.create(
   dog_id: 2,
   groomer_id: 2,
   appt_start_datetime: "07/20/22 10:00",
