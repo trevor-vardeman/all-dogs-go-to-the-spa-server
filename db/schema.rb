@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2022_07_08_205037) do
   create_table "appointments", force: :cascade do |t|
     t.integer "dog_id"
     t.integer "groomer_id"
-    t.string "appt_start_datetime"
-    t.string "appt_end_datetime"
+    t.string "appt_datetime"
     t.integer "service_id"
   end
 
@@ -40,6 +39,7 @@ ActiveRecord::Schema.define(version: 2022_07_08_205037) do
     t.string "description"
     t.integer "cost"
     t.integer "appointment_id"
+    t.integer "service_length"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

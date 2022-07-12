@@ -5,6 +5,7 @@ class CreateServices < ActiveRecord::Migration[6.1]
       t.string :description
       t.integer :cost
       t.integer :appointment_id
+      t.integer :service_length
       t.timestamps
     end
   end
