@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/upcoming-appointments" do
-    { message: "Good luck with your project!" }.to_json
+    Appointment.upcoming_appointments.to_json
   end
 
   get "/past-appointments" do
