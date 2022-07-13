@@ -27,10 +27,11 @@ class ApplicationController < Sinatra::Base
 
   get "/upcoming-appointments" do
     Appointment.upcoming_appointments.to_json
+    # Appointment.all.select {|appointment| appointment.appt_datetime >= Time.now}.sort_by(&:appt_datetime)
   end
 
   get "/past-appointments" do
-    { message: "Good luck with your project!" }.to_json
+    Appointment.upcoming_appointments.to_json
   end
 
   get "/dogs" do
@@ -40,5 +41,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/services" do
+    services = Service.all
+    services.to_json
   end
 end
