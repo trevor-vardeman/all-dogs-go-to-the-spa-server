@@ -2,7 +2,7 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    # { message: "Good luck with your project!" }.to_json
   end
 
   get "/create-appointment" do
@@ -35,9 +35,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/dogs" do
+    dogs = Dog.all
+    dogs.to_json
   end
 
   get "/groomers" do
+    groomers = Groomer.all
+    groomers.to_json
   end
 
   get "/services" do
