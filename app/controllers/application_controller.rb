@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/past-appointments" do
-    Appointment.upcoming_appointments.to_json
+    Appointment.past_appointments.to_json
   end
 
   get "/dogs" do
