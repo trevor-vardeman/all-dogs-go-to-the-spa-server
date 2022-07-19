@@ -27,7 +27,11 @@ class ApplicationController < Sinatra::Base
 
   get "/appointments" do
     Appointment.upcoming_appointments.to_json
-    # Appointment.all.select {|appointment| appointment.appt_datetime >= Time.now}.sort_by(&:appt_datetime)
+  end
+
+  get "/appointments/:id" do
+    appointment = Appointment.find(params[:id])
+    appointment.to_json
   end
 
   patch "/appointments/:id" do
