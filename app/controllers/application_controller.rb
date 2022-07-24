@@ -26,12 +26,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/appointments" do
-    Appointment.upcoming_appointments.to_json
+    Appointment.upcoming_appointments.to_json(include: [:service, :dog, :groomer])
   end
 
   get "/appointments/:id" do
     appointment = Appointment.find(params[:id])
-    appointment.to_json
+    appointment.to_json(include: [:service])
   end
 
   patch "/appointments/:id" do
