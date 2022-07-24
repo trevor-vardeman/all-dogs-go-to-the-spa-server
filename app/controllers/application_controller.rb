@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 
   get "/appointments/:id" do
     appointment = Appointment.find(params[:id])
-    appointment.to_json(include: [:service])
+    appointment.to_json(include: [:service, :dog, :groomer])
   end
 
   patch "/appointments/:id" do
@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/past-appointments" do
-    Appointment.past_appointments.to_json
+    Appointment.past_appointments.to_json(include: [:service, :dog, :groomer])
   end
 
   get "/dogs" do
