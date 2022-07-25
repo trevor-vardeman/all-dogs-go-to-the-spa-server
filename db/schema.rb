@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_07_25_074743) do
     t.string "photo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "archived?"
+    t.string "archived"
   end
 
   create_table "groomers", force: :cascade do |t|

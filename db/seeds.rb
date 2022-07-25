@@ -5,7 +5,7 @@ Dog.create(
   breed: "Hound",
   age: 3,
   photo_url: "https://images.dog.ceo/breeds/hound-blood/n02088466_2908.jpg",
-  archived?: false
+  archived: false
 )
 
 Dog.create(
@@ -13,7 +13,7 @@ Dog.create(
   breed: "Elkhound",
   age: 2,
   photo_url: "https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_3862.jpg",
-  archived?: false
+  archived: false
 )
 
 Dog.create(
@@ -21,7 +21,7 @@ Dog.create(
   breed: "Tervuren",
   age: 3,
   photo_url: "https://images.dog.ceo/breeds/tervuren/yoda_in_garden.jpg",
-  archived?: false
+  archived: false
 )
 
 Dog.create(
@@ -29,7 +29,7 @@ Dog.create(
   breed: "Akita",
   age: 2,
   photo_url: "https://images.dog.ceo/breeds/akita/Akina_Inu_in_Riga_1.jpg",
-  archived?: true
+  archived: true
 )
 
 puts "✅ Done seeding!"
@@ -86,21 +86,21 @@ puts "🌱 Seeding appointments..."
 Appointment.create(
   dog_id: 1,
   groomer_id: 3,
-  appt_datetime: "2022-07-11T10:00",
+  appt_datetime: "2022-08-10T10:00",
   service_id: 1
 )
 
 Appointment.create(
   dog_id: 1,
   groomer_id: 2,
-  appt_datetime: "2022-07-14T10:00",
+  appt_datetime: "2022-08-14T10:00",
   service_id: 2
 )
 
 Appointment.create(
   dog_id: 2,
   groomer_id: 2,
-  appt_datetime: "2022-07-20T10:00",
+  appt_datetime: "2022-08-20T10:00",
   service_id: 2
 )
 

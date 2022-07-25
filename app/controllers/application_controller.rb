@@ -66,13 +66,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/dogs" do
-    dogs = Dog.all.where(archived?: false)
+    dogs = Dog.all.where(archived: false)
     dogs.to_json
   end
 
-  delete "/dogs/:id" do
+  patch "/dogs/:id" do
     dog = Dog.find(params[:id])
-    dog.destroy_all
+    dog.update(archived: params[:archived])
     dog.to_json
   end
 
@@ -85,8 +85,8 @@ class ApplicationController < Sinatra::Base
     )
   end
 
-  get "archived-dogs" do
-    dogs = Dog.all
+  get "/archived-dogs" do
+    dogs = Dog.all.where(archived: true)
     dogs.to_json
   end
 

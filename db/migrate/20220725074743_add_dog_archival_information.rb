@@ -1,5 +1,5 @@
 class AddDogArchivalInformation < ActiveRecord::Migration[6.1]
   def change
-    add_column :dogs, :archived?, :string
+    add_column :dogs, :archived, :string
   end
 end
