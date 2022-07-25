@@ -70,6 +70,20 @@ class ApplicationController < Sinatra::Base
     dogs.to_json
   end
 
+  delete "/dogs/:id" do
+    dogs = Dog.all
+    dogs.to_json
+  end
+
+  post "/create-dog" do
+    dog = Dog.create(
+      name: params[:name],
+      breed: params[:breed],
+      age: params[:age],
+      photo_url: params[:photo_url]
+    )
+  end
+
   get "/groomers" do
     groomers = Groomer.all
     groomers.to_json
