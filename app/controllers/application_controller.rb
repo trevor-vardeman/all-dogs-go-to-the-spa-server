@@ -66,13 +66,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/dogs" do
-    dogs = Dog.all
+    dogs = Dog.all.where(archived?: false)
     dogs.to_json
   end
 
   delete "/dogs/:id" do
     dog = Dog.find(params[:id])
-    dog.destroy
+    dog.destroy_all
     dog.to_json
   end
 
@@ -83,6 +83,11 @@ class ApplicationController < Sinatra::Base
       age: params[:age],
       photo_url: params[:photo_url]
     )
+  end
+
+  get "archived-dogs" do
+    dogs = Dog.all
+    dogs.to_json
   end
 
   get "/groomers" do

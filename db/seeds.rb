@@ -4,21 +4,32 @@ Dog.create(
   name: "Droopy",
   breed: "Hound",
   age: 3,
-  photo_url: "https://images.dog.ceo/breeds/hound-blood/n02088466_2908.jpg"
+  photo_url: "https://images.dog.ceo/breeds/hound-blood/n02088466_2908.jpg",
+  archived?: false
 )
 
 Dog.create(
   name: "Shadow",
   breed: "Elkhound",
   age: 2,
-  photo_url: "https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_3862.jpg"
+  photo_url: "https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_3862.jpg",
+  archived?: false
 )
 
 Dog.create(
   name: "Yoda",
   breed: "Tervuren",
   age: 3,
-  photo_url: "https://images.dog.ceo/breeds/tervuren/yoda_in_garden.jpg"
+  photo_url: "https://images.dog.ceo/breeds/tervuren/yoda_in_garden.jpg",
+  archived?: false
+)
+
+Dog.create(
+  name: "Kita",
+  breed: "Akita",
+  age: 2,
+  photo_url: "https://images.dog.ceo/breeds/akita/Akina_Inu_in_Riga_1.jpg",
+  archived?: true
 )
 
 puts "✅ Done seeding!"
