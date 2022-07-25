@@ -71,8 +71,9 @@ class ApplicationController < Sinatra::Base
   end
 
   delete "/dogs/:id" do
-    dogs = Dog.all
-    dogs.to_json
+    dog = Dog.find(params[:id])
+    dog.destroy
+    dog.to_json
   end
 
   post "/create-dog" do
