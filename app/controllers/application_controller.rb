@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   get "/create-appointment" do
     data = {}
 
-    dogs = Dog.all
+    dogs = Dog.all.where(archived: false)
     groomers = Groomer.all
     services = Service.all
 
@@ -81,7 +81,8 @@ class ApplicationController < Sinatra::Base
       name: params[:name],
       breed: params[:breed],
       age: params[:age],
-      photo_url: params[:photo_url]
+      photo_url: params[:photo_url],
+      archived: params[:archived]
     )
   end
 
