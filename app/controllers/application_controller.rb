@@ -92,12 +92,21 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/groomers" do
-    groomers = Groomer.all.where(offboarding_date: null)
+    groomers = Groomer.all.where(offboarding_date: "")
+    groomers.to_json
+  end
+
+  get "/offboarded-groomers" do
+    groomers = Groomer.all.where.not(offboarding_date: "")
     groomers.to_json
   end
 
   post "/create-groomer" do
-    groomer = Groomer.create(name: params[:name])
+    groomer = Groomer.create(
+      name: params[:name],
+      onboarding_date: params[:onboarding_date],
+      offboarding_date: params[:offboarding_date]
+    )
   end
 
   get "/services" do
