@@ -96,6 +96,21 @@ class ApplicationController < Sinatra::Base
     groomers.to_json
   end
 
+  get "/groomers/:id" do
+    groomer = Groomer.find(params[:id])
+    groomer.to_json
+  end
+
+  patch "/groomers/:id" do
+    groomer = Groomer.find(params[:id])
+    groomer.update(
+      name: params[:name],
+      onboarding_date: params[:onboarding_date],
+      offboarding_date: params[:offboarding_date]
+    )
+    groomer.to_json
+  end
+
   get "/offboarded-groomers" do
     groomers = Groomer.all.where.not(offboarding_date: "")
     groomers.to_json
