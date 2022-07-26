@@ -38,17 +38,17 @@ puts "🌱 Seeding groomers..."
 
 Groomer.create(
   name: "Johnny",
-  onboarding_date: "2022-04-20T10:00",
+  onboarding_date: "2022-04-20",
   offboarding_date: ""
 )
 Groomer.create(
   name: "Moira",
-  onboarding_date: "2021-08-20T10:00",
-  offboarding_date: "2022-07-20T10:00"
+  onboarding_date: "2021-08-20",
+  offboarding_date: "2022-07-20"
 )
 Groomer.create(
   name: "David",
-  onboarding_date: "2019-12-5T10:00",
+  onboarding_date: "2019-12-05",
   offboarding_date: ""
 )
 

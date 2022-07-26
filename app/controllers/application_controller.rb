@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
     data = {}
 
     dogs = Dog.all.where(archived: false)
-    groomers = Groomer.all
+    groomers = Groomer.all.where(offboarding_date: "")
     services = Service.all
 
     data = dogs, groomers, services
