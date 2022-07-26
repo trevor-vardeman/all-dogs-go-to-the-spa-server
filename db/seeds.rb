@@ -36,9 +36,21 @@ puts "✅ Done seeding!"
 
 puts "🌱 Seeding groomers..."
 
-Groomer.create(name: "Johnny")
-Groomer.create(name: "Moira")
-Groomer.create(name: "David")
+Groomer.create(
+  name: "Johnny",
+  onboarding_date: "2022-04-20T10:00",
+  offboarding_date: ""
+)
+Groomer.create(
+  name: "Moira",
+  onboarding_date: "2021-08-20T10:00",
+  offboarding_date: "2022-07-20T10:00"
+)
+Groomer.create(
+  name: "David",
+  onboarding_date: "2019-12-5T10:00",
+  offboarding_date: ""
+)
 
 puts "✅ Done seeding!"
 
