@@ -139,4 +139,14 @@ class ApplicationController < Sinatra::Base
     services = Service.where(archived: true)
     services.to_json
   end
+
+  post "/create-service" do
+    service = Service.create(
+      name: params[:name],
+      description: params[:description],
+      cost: params[:cost],
+      service_length: params[:service_length],
+      archived: params[:archived]
+    )
+  end
 end
