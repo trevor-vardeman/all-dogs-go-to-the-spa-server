@@ -60,35 +60,40 @@ Service.create(
   name: "Complete Grooming Service",
   description: "Haircut, bath, paw cleanse, and ear cleaning",
   cost: 100,
-  service_length: 150
+  service_length: 150,
+  archived: false
 )
 
 Service.create(
   name: "Haircut",
   description: "A haircut to keep your dog looking fresh",
   cost: 40,
-  service_length: 60
+  service_length: 60,
+  archived: false
 )
 
 Service.create(
   name: "Bath",
   description: "Just a bath to get your dog clean",
   cost: 40,
-  service_length: 60
+  service_length: 60,
+  archived: false
 )
 
 Service.create(
   name: "Paw Cleanse",
   description: "Thorough paw cleansing and nail trim",
   cost: 20,
-  service_length: 30
+  service_length: 30,
+  archived: false
 )
 
 Service.create(
   name: "Ear Cleanse",
   description: "A quick ear cleanse",
   cost: 20,
-  service_length: 30
+  service_length: 30,
+  archived: true
 )
 
 puts "✅ Done seeding!"

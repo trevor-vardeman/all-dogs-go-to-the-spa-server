@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
 
     dogs = Dog.all.where(archived: false)
     groomers = Groomer.all.where(offboarding_date: "")
-    services = Service.all
+    services = Service.all.where(archived: false)
 
     data = dogs, groomers, services
     data.to_json
@@ -125,7 +125,18 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/services" do
-    services = Service.all
+    services = Service.where(archived: false)
+    services.to_json
+  end
+
+  patch "/services/:id" do
+    service = Service.find(params[:id])
+    service.update(archived: params[:archived])
+    service.to_json
+  end
+
+  get "/archived-services" do
+    services = Service.where(archived: true)
     services.to_json
   end
 end
