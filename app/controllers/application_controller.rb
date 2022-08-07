@@ -101,7 +101,7 @@ class ApplicationController < Sinatra::Base
     groomer.to_json
   end
 
-  patch "/groomers/:id" do
+  patch "/groomers/edit/:id" do
     groomer = Groomer.find(params[:id])
     groomer.update(
       name: params[:name],
