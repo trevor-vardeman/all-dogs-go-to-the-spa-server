@@ -32,6 +32,22 @@ Dog.create(
   archived: true
 )
 
+Dog.create(
+  name: "Noel",
+  breed: "Sharpei",
+  age: 1,
+  photo_url: "https://images.dog.ceo/breeds/sharpei/noel.jpg",
+  archived: false
+)
+
+Dog.create(
+  name: "Plott",
+  breed: "Hound",
+  age: 5,
+  photo_url: "https://images.dog.ceo/breeds/hound-plott/hhh_plott002.JPG",
+  archived: false
+)
+
 puts "✅ Done seeding!"
 
 puts "🌱 Seeding groomers..."
