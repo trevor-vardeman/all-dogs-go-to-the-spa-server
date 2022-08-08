@@ -117,7 +117,7 @@ puts "✅ Done seeding!"
 puts "🌱 Seeding appointments..."
 
 Appointment.create(
-  dog_id: 1,
+  dog_id: 4,
   groomer_id: 3,
   appt_datetime: "2022-08-10T10:00",
   service_id: 1
