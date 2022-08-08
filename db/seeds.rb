@@ -109,21 +109,21 @@ Appointment.create(
 
 Appointment.create(
   dog_id: 1,
-  groomer_id: 2,
+  groomer_id: 1,
   appt_datetime: "2022-08-14T10:00",
   service_id: 2
 )
 
 Appointment.create(
   dog_id: 2,
-  groomer_id: 2,
+  groomer_id: 3,
   appt_datetime: "2022-08-20T10:00",
   service_id: 2
 )
 
 Appointment.create(
   dog_id: 3,
-  groomer_id: 1,
+  groomer_id: 2,
   appt_datetime: "2022-07-10T12:00",
   service_id: 3
 )
