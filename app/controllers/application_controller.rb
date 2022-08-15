@@ -20,8 +20,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/create-appointment" do
-    data = {}
-
     dogs = Dog.all.where(archived: false)
     groomers = Groomer.all.where(offboarding_date: "")
     services = Service.all.where(archived: false)
@@ -31,8 +29,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/appointments/:id/edit" do
-    data = {}
-
     dogs = Dog.all
     groomers = Groomer.all
     services = Service.all
@@ -59,6 +55,7 @@ class ApplicationController < Sinatra::Base
       appt_datetime: params[:appt_datetime],
       service_id: params[:service_id]
     )
+    appointment.to_json
   end
 
   get "/past-appointments" do
@@ -84,6 +81,7 @@ class ApplicationController < Sinatra::Base
       photo_url: params[:photo_url],
       archived: params[:archived]
     )
+    dog.to_json
   end
 
   get "/archived-dogs" do
@@ -149,5 +147,6 @@ class ApplicationController < Sinatra::Base
       service_length: params[:service_length],
       archived: params[:archived]
     )
+    service.to_json
   end
 end
