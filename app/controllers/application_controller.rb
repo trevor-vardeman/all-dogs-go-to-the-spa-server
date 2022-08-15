@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
     data.to_json
   end
 
-  get "/appointments/edit/:id" do
+  get "/appointments/:id/edit" do
     data = {}
 
     dogs = Dog.all
@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
     data.to_json
   end
 
-  patch "/appointments/edit/:id" do
+  patch "/appointments/:id/edit" do
     appointment = Appointment.find(params[:id])
     appointment.update(
       dog_id: params[:dog_id],
@@ -101,7 +101,7 @@ class ApplicationController < Sinatra::Base
     groomer.to_json
   end
 
-  patch "/groomers/edit/:id" do
+  patch "/groomers/:id/edit" do
     groomer = Groomer.find(params[:id])
     groomer.update(
       name: params[:name],
