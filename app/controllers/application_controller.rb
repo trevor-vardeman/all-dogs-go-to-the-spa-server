@@ -1,6 +1,6 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
-  
+
   get "/" do
   end
 
@@ -122,6 +122,7 @@ class ApplicationController < Sinatra::Base
       onboarding_date: params[:onboarding_date],
       offboarding_date: params[:offboarding_date]
     )
+    groomer.to_json
   end
 
   get "/services" do

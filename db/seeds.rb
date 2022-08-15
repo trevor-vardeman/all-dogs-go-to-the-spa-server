@@ -21,7 +21,7 @@ Dog.create(
   breed: "Tervuren",
   age: 3,
   photo_url: "https://images.dog.ceo/breeds/tervuren/yoda_in_garden.jpg",
-  archived: false
+  archived: true
 )
 
 Dog.create(
@@ -29,7 +29,7 @@ Dog.create(
   breed: "Akita",
   age: 2,
   photo_url: "https://images.dog.ceo/breeds/akita/Akina_Inu_in_Riga_1.jpg",
-  archived: true
+  archived: false
 )
 
 Dog.create(
@@ -119,7 +119,7 @@ puts "🌱 Seeding appointments..."
 Appointment.create(
   dog_id: 4,
   groomer_id: 3,
-  appt_datetime: "2022-08-10T10:00",
+  appt_datetime: "2022-08-16T10:00",
   service_id: 1
 )
 
